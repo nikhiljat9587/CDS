@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lesson: Spotting Errors - CDS Foundation 2026</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #005baa;
+      margin-bottom: 30px;
+    }
+
+    .video-section {
+      background: white;
+      margin-bottom: 30px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .description {
+      margin-top: 15px;
+      color: #333;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .notes-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #005baa;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .notes-button:hover {
+      background-color: #00467a;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.4rem;
+      }
+
+      .description {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Lesson: Spotting Errors</h1>
+
+    <!-- Video 1 -->
+    <div class="video-section">
+      <video controls class="video-player">
+        <source src="videos/spotting-errors-part1.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="description">
+        <p><strong>Part 1:</strong> Introduction to common spotting error rules with examples.</p>
+        <a href="notes/spotting-errors-part1.pdf" class="notes-button" target="_blank">📘 View/Download Notes</a>
+      </div>
+    </div>
+
+    <!-- Video 2 -->
+    <div class="video-section">
+      <video controls class="video-player">
+        <source src="videos/spotting-errors-part2.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="description">
+        <p><strong>Part 2:</strong> Practice questions with step-by-step explanation.</p>
+        <a href="notes/spotting-errors-part2.pdf" class="notes-button" target="_blank">📘 View/Download Notes</a>
+      </div>
+    </div>
+
+    <!-- Video 3 -->
+    <div class="video-section">
+      <video controls class="video-player">
+        <source src="videos/spotting-errors-part3.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="description">
+        <p><strong>Part 3:</strong> Advanced grammar traps and CDS-level error spotting tips.</p>
+        <a href="notes/spotting-errors-part3.pdf" class="notes-button" target="_blank">📘 View/Download Notes</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fullscreen Auto-Open Script -->
+  <script>
+    document.querySelectorAll(".video-player").forEach(video => {
+      video.addEventListener("click", function () {
+        if (this.requestFullscreen) {
+          this.requestFullscreen();
+        } else if (this.webkitRequestFullscreen) {
+          this.webkitRequestFullscreen();
+        } else if (this.msRequestFullscreen) {
+          this.msRequestFullscreen();
+        }
+
+        // Auto-play after fullscreen
+        this.play();
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>English - CDS Foundation 2026</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    header {
+      background-color: #0073aa;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    .chapter-list {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .chapter-card {
+      background-color: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: 0.2s;
+    }
+
+    .chapter-card:hover {
+      transform: scale(1.03);
+      background-color: #eef6ff;
+    }
+
+    .chapter-card a {
+      text-decoration: none;
+      color: #0073aa;
+      font-weight: bold;
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #555;
+    }
+
+    .back-link {
+      margin-top: 20px;
+      display: inline-block;
+      text-decoration: none;
+      color: #0073aa;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>English - CDS Foundation 2026</h1>
+    <p>All Important English Topics</p>
+  </header>
+
+  <main>
+    <section class="chapter-list" id="chapters">
+      <!-- Chapters will be added by JS -->
+    </section>
+
+    <div style="text-align: center;">
+      <a class="back-link" href="index.html">&larr; Back to Subjects</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CDS Foundation</p>
+  </footer>
+
+  <script>
+    const chapters = [
+      { name: "Synonyms & Antonyms", link: "englishunitvideo1.html" },
+      { name: "Spotting Errors", link: "#" },
+      { name: "Sentence Improvement", link: "#" },
+      { name: "Reading Comprehension", link: "#" },
+      { name: "Cloze Test", link: "#" },
+      { name: "Fill in the Blanks", link: "#" },
+      { name: "One Word Substitution", link: "#" },
+      { name: "Idioms and Phrases", link: "#" },
+      { name: "Active-Passive Voice", link: "#" },
+      { name: "Direct-Indirect Speech", link: "#" }
+    ];
+
+    const container = document.getElementById("chapters");
+
+    chapters.forEach(chapter => {
+      const div = document.createElement("div");
+      div.className = "chapter-card";
+
+      const a = document.createElement("a");
+      a.href = chapter.link;
+      a.textContent = chapter.name;
+
+      div.appendChild(a);
+      container.appendChild(div);
+    });
+  </script>
+</body>
+</html>
